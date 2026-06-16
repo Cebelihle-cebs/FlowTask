@@ -1,0 +1,551 @@
+/* ===== GLOBAL ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  
+  
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #353368;
+  padding: 15px 30px;
+  color: white;
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== DASHBOARD ===== */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ===== TASK FORM ===== */
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.task-form button {
+  background: #353368;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== TASK CARD ===== */
+
+.task-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.task-card h3 {
+  margin-bottom: 10px;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: .9rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.task-actions button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete {
+  background: crimson;
+  color: white;
+}
+
+/* ===== STATUS COLORS ===== */
+
+.to_do {
+  border-left: 6px solid orange;
+}
+
+.in_progress {
+  border-left: 6px solid dodgerblue;
+}
+
+.done {
+  border-left: 6px solid green;
+}
+
+/* ===== LANDING PAGE ===== */
+
+.landing {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 30px 50px;
+}
+
+/* Header */
+
+.landing-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Glass Card */
+
+.glass-box {
+  background: rgba(100, 98, 98, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 25px;
+}
+
+/* Buttons */
+
+.auth-links {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #353368;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero-card h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* Features */
+
+.features-grid {
+  max-width: 1100px;
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  min-height: 180px;
+}
+
+/* Info */
+
+.info-card {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Stats */
+
+.stats-section {
+  max-width: 1100px;
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+/* CTA */
+
+.cta-section {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .features-grid,
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card h1 {
+    font-size: 2.8rem;
+  }
+
+  .landing-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* Center screen */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6ff;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Button */
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #353368;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Button hover */
+.auth-card button:hover {
+  opacity: 0.9;
+}
+
+/* Error text */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* Info text */
+.info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.task-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.task-form .row {
+  display: flex;
+  gap: 10px;
+}
+
+.task-form button {
+  width: 100%;
+  padding: 10px;
+  background: #353368;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.task-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badges {
+  display: flex;
+  gap: 5px;
+}
+
+.badge {
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.desc {
+  margin: 10px 0;
+  color: #555;
+}
+
+.due {
+  font-size: 13px;
+  color: #777;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background: #3498db;
+  color: white;
+}
+
+.actions button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+/* MAIN */
+.dashboard-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.dash-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dash-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* SEARCH */
+.search-bar {
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* FILTERS */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-bar button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eee;
+}
+
+.filter-bar button.active {
+  background: #353368;
+  color: white;
+}
+
+/* TASK GRID */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  color: gray;
+}
