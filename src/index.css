@@ -8,8 +8,6 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  
-  
 }
 
 /* ===== NAVBAR ===== */
@@ -22,8 +20,6 @@ body {
   padding: 15px 30px;
   color: white;
 }
-
-
 
 .nav-links {
   display: flex;
@@ -154,32 +150,18 @@ body {
   padding: 100px 30px 50px;
 }
 
-/* Header */
-
+/* HEADER (FIXED REMOVED + TOP RIGHT FIX) */
 .landing-header {
-  position: fixed;
-  top: 20px;
-  left: 0;
-  right: 0;
-
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
-
-  margin: auto;
+  margin: 0 auto 30px auto;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* 👈 moved to top right */
   align-items: center;
 }
 
-.brand {
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
 /* Glass Card */
-
 .glass-box {
   background: rgba(100, 98, 98, 0.15);
   backdrop-filter: blur(12px);
@@ -190,7 +172,6 @@ body {
 }
 
 /* Buttons */
-
 .auth-links {
   display: flex;
   gap: 15px;
@@ -215,7 +196,6 @@ body {
 }
 
 /* Hero */
-
 .hero {
   display: flex;
   justify-content: center;
@@ -244,11 +224,9 @@ body {
 }
 
 /* Features */
-
 .features-grid {
   max-width: 1100px;
   margin: 40px auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -259,19 +237,16 @@ body {
 }
 
 /* Info */
-
 .info-card {
   max-width: 1100px;
   margin: auto;
   text-align: center;
 }
 
-/* Stats */
-
+/* Stats (RESTORED TRANSPARENCY) */
 .stats-section {
   max-width: 1100px;
   margin: 40px auto;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -279,18 +254,23 @@ body {
 
 .stat-card {
   text-align: center;
+
+  /* 👇 RESTORED GLASS EFFECT */
+  background: rgba(100, 98, 98, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
 }
 
 /* CTA */
-
 .cta-section {
   max-width: 1100px;
   margin: auto;
   text-align: center;
 }
 
-/* Mobile */
-
+/* MOBILE */
 @media (max-width: 768px) {
 
   .features-grid,
@@ -301,13 +281,9 @@ body {
   .hero-card h1 {
     font-size: 2.8rem;
   }
-
-  .landing-header {
-    flex-direction: column;
-    gap: 15px;
-  }
 }
-/* Center screen */
+
+/* AUTH */
 .auth-wrapper {
   min-height: 100vh;
   display: flex;
@@ -316,7 +292,6 @@ body {
   background: #f4f6ff;
 }
 
-/* Card */
 .auth-card {
   width: 100%;
   max-width: 420px;
@@ -327,7 +302,6 @@ body {
   text-align: center;
 }
 
-/* Inputs */
 .auth-card input {
   width: 100%;
   padding: 10px;
@@ -337,7 +311,6 @@ body {
   outline: none;
 }
 
-/* Button */
 .auth-card button {
   width: 100%;
   padding: 10px;
@@ -350,24 +323,22 @@ body {
   cursor: pointer;
 }
 
-/* Button hover */
 .auth-card button:hover {
   opacity: 0.9;
 }
 
-/* Error text */
 .error {
   color: red;
   font-size: 14px;
 }
 
-/* Info text */
 .info {
   font-size: 14px;
   margin-bottom: 10px;
   color: #444;
 }
 
+/* TASK FORM */
 .task-form {
   background: white;
   padding: 20px;
@@ -402,12 +373,14 @@ body {
   cursor: pointer;
 }
 
+/* TASK GRID */
 .task-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
+/* TASK CARD */
 .task-card {
   background: white;
   padding: 15px;
@@ -466,14 +439,13 @@ body {
   color: white;
 }
 
-/* MAIN */
+/* DASHBOARD */
 .dashboard-container {
   padding: 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* HEADER */
 .dash-header {
   text-align: center;
   margin-bottom: 20px;
@@ -484,7 +456,6 @@ body {
   font-weight: bold;
 }
 
-/* STATS */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -493,11 +464,10 @@ body {
 }
 
 .stat-card {
-  background: white;
   padding: 15px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(233, 230, 230, 0.1);
 }
 
 .stat-card h3 {
@@ -529,7 +499,7 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  background: #eee;
+  background: #faf5f5;
 }
 
 .filter-bar button.active {
@@ -537,15 +507,8 @@ body {
   color: white;
 }
 
-/* TASK GRID */
-.task-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
 /* EMPTY */
 .empty {
   text-align: center;
-  color: gray;
+  color: rgb(224, 213, 213);
 }

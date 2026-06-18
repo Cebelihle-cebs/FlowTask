@@ -40,11 +40,11 @@ function Landing() {
         <div className="glass-box hero-card">
           <h1 style={{ fontWeight: "800" }}>FlowTask</h1>
 
-          <p className="lead">
+          <p className="lead"><strong>
             FlowTask is a modern productivity platform that helps
             students, professionals and teams organize work,
             manage deadlines, track progress and achieve goals
-            efficiently.
+            efficiently.</strong>
           </p>
 
           <div className="cta-row">
